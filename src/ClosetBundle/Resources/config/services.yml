@@ -1,0 +1,4 @@
+services:
+#    closet.example:
+#        class: ClosetBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

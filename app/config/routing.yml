@@ -1,3 +1,23 @@
+finance:
+    resource: "@FinanceBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+schedule:
+    resource: "@ScheduleBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+closet:
+    resource: "@ClosetBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+food:
+    resource: "@FoodBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
