@@ -14,6 +14,6 @@ closet:
     prefix:   /
 
 food:
-    resource: "@FoodBundle/Controller/"
+    resource: "@HealthBundle/Controller/"
     type:     annotation
     prefix:   /

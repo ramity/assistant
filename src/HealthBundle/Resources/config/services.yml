@@ -1,4 +1,4 @@
 services:
 #    food.example:
-#        class: FoodBundle\Example
+#        class: HealthBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]

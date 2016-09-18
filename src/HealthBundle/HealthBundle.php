@@ -1,9 +1,9 @@
 <?php
 
-namespace FoodBundle;
+namespace HealthBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class FoodBundle extends Bundle
+class HealthBundle extends Bundle
 {
 }

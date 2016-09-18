@@ -1,6 +1,6 @@
 <?php
 
-namespace FoodBundle\Tests\Controller;
+namespace HealthBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
