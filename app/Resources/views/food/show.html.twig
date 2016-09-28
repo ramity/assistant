@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Food</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ food.id }}</td>
+            </tr>
+            <tr>
+                <th>Displayname</th>
+                <td>{{ food.displayName }}</td>
+            </tr>
+            <tr>
+                <th>Brandname</th>
+                <td>{{ food.brandName }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ food.description }}</td>
+            </tr>
+            <tr>
+                <th>Servingsize</th>
+                <td>{{ food.servingSize }}</td>
+            </tr>
+            <tr>
+                <th>Servingspercontainer</th>
+                <td>{{ food.servingsPerContainer }}</td>
+            </tr>
+            <tr>
+                <th>Calories</th>
+                <td>{{ food.calories }}</td>
+            </tr>
+            <tr>
+                <th>Carbohydrates</th>
+                <td>{{ food.carbohydrates }}</td>
+            </tr>
+            <tr>
+                <th>Protein</th>
+                <td>{{ food.protein }}</td>
+            </tr>
+            <tr>
+                <th>Fat</th>
+                <td>{{ food.fat }}</td>
+            </tr>
+            <tr>
+                <th>Saturatedfat</th>
+                <td>{{ food.saturatedFat }}</td>
+            </tr>
+            <tr>
+                <th>Polyunsaturatedfat</th>
+                <td>{{ food.polyunsaturatedFat }}</td>
+            </tr>
+            <tr>
+                <th>Monounsaturatedfat</th>
+                <td>{{ food.monounsaturatedFat }}</td>
+            </tr>
+            <tr>
+                <th>Transfat</th>
+                <td>{{ food.transFat }}</td>
+            </tr>
+            <tr>
+                <th>Cholesterol</th>
+                <td>{{ food.cholesterol }}</td>
+            </tr>
+            <tr>
+                <th>Sodium</th>
+                <td>{{ food.sodium }}</td>
+            </tr>
+            <tr>
+                <th>Potassium</th>
+                <td>{{ food.potassium }}</td>
+            </tr>
+            <tr>
+                <th>Dietaryfiber</th>
+                <td>{{ food.dietaryFiber }}</td>
+            </tr>
+            <tr>
+                <th>Sugars</th>
+                <td>{{ food.sugars }}</td>
+            </tr>
+            <tr>
+                <th>Vitamina</th>
+                <td>{{ food.vitaminA }}</td>
+            </tr>
+            <tr>
+                <th>Vitaminc</th>
+                <td>{{ food.vitaminC }}</td>
+            </tr>
+            <tr>
+                <th>Calcium</th>
+                <td>{{ food.calcium }}</td>
+            </tr>
+            <tr>
+                <th>Iron</th>
+                <td>{{ food.iron }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('food_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('food_edit', { 'id': food.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

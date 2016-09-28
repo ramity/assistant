@@ -24,6 +24,13 @@ class Food
     /**
      * @var string
      *
+     * @ORM\Column(name="display_name", type="string", length=255, nullable=true)
+     */
+    private $displayName;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="brand_name", type="string", length=255, nullable=true)
      */
     private $brandName;
@@ -177,6 +184,30 @@ class Food
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set displayName
+     *
+     * @param string $displayName
+     *
+     * @return Food
+     */
+    public function setdisplayName($displayName)
+    {
+        $this->displayName = $displayName;
+
+        return $this;
+    }
+
+    /**
+     * Get displayName
+     *
+     * @return string
+     */
+    public function getdisplayName()
+    {
+        return $this->displayName;
     }
 
     /**
@@ -683,4 +714,3 @@ class Food
         return $this->iron;
     }
 }
-

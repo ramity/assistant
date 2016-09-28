@@ -1,3 +1,15 @@
+health_meal:
+    resource: "@HealthBundle/Controller/MealController.php"
+    type:     annotation
+
+health_mealplan:
+    resource: "@HealthBundle/Controller/MealplanController.php"
+    type:     annotation
+
+health_food:
+    resource: "@HealthBundle/Controller/FoodController.php"
+    type:     annotation
+
 finance:
     resource: "@FinanceBundle/Controller/"
     type:     annotation

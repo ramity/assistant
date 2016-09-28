@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Food list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Displayname</th>
+                <th>Brandname</th>
+                <th>Description</th>
+                <th>Servingsize</th>
+                <th>Servingspercontainer</th>
+                <th>Calories</th>
+                <th>Carbohydrates</th>
+                <th>Protein</th>
+                <th>Fat</th>
+                <th>Saturatedfat</th>
+                <th>Polyunsaturatedfat</th>
+                <th>Monounsaturatedfat</th>
+                <th>Transfat</th>
+                <th>Cholesterol</th>
+                <th>Sodium</th>
+                <th>Potassium</th>
+                <th>Dietaryfiber</th>
+                <th>Sugars</th>
+                <th>Vitamina</th>
+                <th>Vitaminc</th>
+                <th>Calcium</th>
+                <th>Iron</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for food in foods %}
+            <tr>
+                <td><a href="{{ path('food_show', { 'id': food.id }) }}">{{ food.id }}</a></td>
+                <td>{{ food.displayName }}</td>
+                <td>{{ food.brandName }}</td>
+                <td>{{ food.description }}</td>
+                <td>{{ food.servingSize }}</td>
+                <td>{{ food.servingsPerContainer }}</td>
+                <td>{{ food.calories }}</td>
+                <td>{{ food.carbohydrates }}</td>
+                <td>{{ food.protein }}</td>
+                <td>{{ food.fat }}</td>
+                <td>{{ food.saturatedFat }}</td>
+                <td>{{ food.polyunsaturatedFat }}</td>
+                <td>{{ food.monounsaturatedFat }}</td>
+                <td>{{ food.transFat }}</td>
+                <td>{{ food.cholesterol }}</td>
+                <td>{{ food.sodium }}</td>
+                <td>{{ food.potassium }}</td>
+                <td>{{ food.dietaryFiber }}</td>
+                <td>{{ food.sugars }}</td>
+                <td>{{ food.vitaminA }}</td>
+                <td>{{ food.vitaminC }}</td>
+                <td>{{ food.calcium }}</td>
+                <td>{{ food.iron }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('food_show', { 'id': food.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('food_edit', { 'id': food.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('food_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -5,12 +5,12 @@ namespace HealthBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Meal
+ * Mealplan
  *
- * @ORM\Table(name="meal")
- * @ORM\Entity(repositoryClass="HealthBundle\Repository\MealRepository")
+ * @ORM\Table(name="mealplan")
+ * @ORM\Entity(repositoryClass="HealthBundle\Repository\MealplanRepository")
  */
-class Meal
+class Mealplan
 {
     /**
      * @var int
@@ -29,10 +29,10 @@ class Meal
     private $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity="HealthBundle\Entity\Food", cascade={"persist"})
-     * @ORM\JoinColumn(name="foodItems", referencedColumnName="id", onDelete="CASCADE")
+     * @ORM\ManyToOne(targetEntity="HealthBundle\Entity\Meal", cascade={"persist"})
+     * @ORM\JoinColumn(name="meal_items", referencedColumnName="id", onDelete="CASCADE")
      */
-    private $foodItems;
+    private $mealItems;
 
 
     /**
@@ -50,7 +50,7 @@ class Meal
      *
      * @param string $name
      *
-     * @return Meal
+     * @return Mealplan
      */
     public function setName($name)
     {
@@ -70,26 +70,26 @@ class Meal
     }
 
     /**
-     * Set foodItems
+     * Set mealItems
      *
-     * @param array $foodItems
+     * @param integer $mealItems
      *
-     * @return Meal
+     * @return Mealplan
      */
-    public function setFoodItems($foodItems)
+    public function setMealItems($mealItems)
     {
-        $this->foodItems = $foodItems;
+        $this->mealItems = $mealItems;
 
         return $this;
     }
 
     /**
-     * Get foodItems
+     * Get mealItems
      *
-     * @return array
+     * @return int
      */
-    public function getFoodItems()
+    public function getMealItems()
     {
-        return $this->foodItems;
+        return $this->mealItems;
     }
 }
